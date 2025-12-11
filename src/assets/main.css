@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap");
+
+:root {
+  --color-black: #000;
+  --color-green: #1ea575;
+  --color-red: #c73b0f;
+  --color-rose-900: #260f08;
+  --color-rose-500: #87635a;
+  --color-rose-400: #ad8a85;
+  --color-rose-300: #caafa7;
+  --color-rose-100: #f5eeec;
+  --color-rose-50: #fcf8f6;
+  --color-white: #fff;
+
+  --space-100: 0.4rem;
+  --space-200: 0.8rem;
+  --space-250: 1rem;
+  --space-300: 1.2rem;
+  --space-400: 1.6rem;
+  --space-500: 2.4rem;
+  --space-600: 3.2rem;
+  --space-700: 4rem;
+  --space-800: 8.8rem;
+
+  --column-gap: var(--space-500);
+  --row-gap: var(--space-600);
+
+  --fs-sm: 1.4rem;
+  --fs-md: 1.6rem;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 999px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--color-rose-50);
+  font-family: "Red Hat Text", sans-serif;
+  font-size: var(--fs-sm);
+  font-weight: 400;
+  padding: var(--space-500);
+}
+
+@media screen and (min-width: 48rem) {
+  body {
+    padding: var(--space-700);
+  }
+}

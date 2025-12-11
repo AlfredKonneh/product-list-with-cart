@@ -17,10 +17,10 @@
 </template>
 
 <script setup>
-import { useProductsStore } from "@/store/Products";
-import SingleProduct from "@/components/product/SingleProduct.vue";
+import { useProductsStore } from '@/store/Products'
+import SingleProduct from '@/components/Product/SingleProduct.vue'
 
-const { productsData } = useProductsStore();
+const { productsData } = useProductsStore()
 </script>
 
 <style scoped>

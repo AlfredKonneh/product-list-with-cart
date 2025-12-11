@@ -28,12 +28,12 @@
 </template>
 
 <script setup>
-import { computed } from "vue";
-import AddButton from "./AddButton.vue";
-import QuantityControls from "./QuantityControls.vue";
+import { computed } from 'vue'
+import AddButton from './AddButton.vue'
+import QuantityControls from './QuantityControls.vue'
 
-import { useCartStore } from "@/store/Cart";
-import { formatCents } from "@/utils/money";
+import { useCartStore } from '@/store/Cart'
+import { formatCents } from '@/utils/money'
 
 const props = defineProps({
   product: Object,
@@ -52,28 +52,28 @@ const props = defineProps({
   prodPrice: {
     type: Number,
   },
-});
+})
 
-const store = useCartStore();
+const store = useCartStore()
 
 function handleAdd() {
-  store.addItem(props.product);
+  store.addItem(props.product)
 }
 
 async function updateQuantity(id, type) {
-  if (type === "increment") {
-    store.incrementQuantity(id);
-  } else store.decrementQuantity(id);
+  if (type === 'increment') {
+    store.incrementQuantity(id)
+  } else store.decrementQuantity(id)
 }
 
-const price = computed(() => formatCents(props.prodPrice));
+const price = computed(() => formatCents(props.prodPrice))
 
 const quantity = computed(() => {
-  const item = store.getItem(props.prodId);
-  return item ? item.quantity : 0;
-});
+  const item = store.getItem(props.prodId)
+  return item ? item.quantity : 0
+})
 
-const isInCart = computed(() => store.isInCart(props.prodId));
+const isInCart = computed(() => store.isInCart(props.prodId))
 </script>
 
 <style scoped>

@@ -23,7 +23,7 @@ export const useCartStore = defineStore('Cart', () => {
         name: item.name,
         id: item.id,
         price: item.priceCents,
-        thumbnail: item.thumbnail,
+        thumbnail: item.image.thumbnail,
         quantity: 1,
       })
 

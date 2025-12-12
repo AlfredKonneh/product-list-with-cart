@@ -52,7 +52,7 @@ const totalPrice = computed(() => formatCents(props.itemPrice * props.itemQuanti
 .item__detail {
   display: flex;
   align-items: center;
-  gap: var(--spacing-400);
+  gap: var(--space-400);
 }
 
 .item__img {

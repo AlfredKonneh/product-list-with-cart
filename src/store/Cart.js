@@ -26,8 +26,6 @@ export const useCartStore = defineStore('Cart', () => {
         thumbnail: item.image.thumbnail,
         quantity: 1,
       })
-
-      console.log(cart)
     }
   }
 

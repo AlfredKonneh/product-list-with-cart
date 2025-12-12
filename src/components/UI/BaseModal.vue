@@ -16,21 +16,21 @@
 </template>
 
 <script setup>
-import { watch } from "vue";
+import { watch } from 'vue'
 
 const props = defineProps({
   showDialog: {
     type: Boolean,
     default: false,
   },
-});
+})
 
 watch(
   () => props.showDialog,
   (val) => {
-    document.body.style.overflow = val ? "hidden" : "";
-  }
-);
+    document.body.style.overflow = val ? 'hidden' : ''
+  },
+)
 </script>
 
 <style scoped>
@@ -43,6 +43,7 @@ watch(
   align-items: start;
   padding-top: 2%;
   z-index: 50;
+  overflow: auto;
 }
 
 .dialog-container {

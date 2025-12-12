@@ -8,7 +8,7 @@ defineProps({
     type: String,
     required: true,
   },
-});
+})
 </script>
 
 <style scoped>
@@ -17,7 +17,6 @@ defineProps({
 }
 
 .grid--main {
-  /* align-items: flex-start; */
   gap: var(--space-600);
   max-width: 200rem;
   margin-inline: auto;

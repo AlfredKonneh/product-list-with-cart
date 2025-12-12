@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-import { computed } from "vue";
+import { computed } from 'vue'
 
 const props = defineProps({
   mode: {
@@ -18,9 +18,9 @@ const props = defineProps({
     required: false,
     default: null,
   },
-});
+})
 
-const btnClasses = computed(() => [props.mode, props.size]);
+const btnClasses = computed(() => [props.mode, props.size])
 </script>
 
 <style scoped>
@@ -47,6 +47,7 @@ const btnClasses = computed(() => [props.mode, props.size]);
 }
 
 .btn-add-to-cart {
+  color: var(--color-rose-900);
   display: flex;
   align-items: center;
   justify-content: center;

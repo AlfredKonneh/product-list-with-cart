@@ -6,6 +6,9 @@
         <h3 class="heading">Order Confirmed</h3>
         <p class="order__message">We hope you enjoy your food!</p>
       </header>
+      <div class="order-items">
+        <cart-items-list is-order></cart-items-list>
+      </div>
     </template>
 
     <base-button mode="btn-primary" size="full" @click="$emit('new-order')"
@@ -15,8 +18,9 @@
 </template>
 
 <script setup>
-defineEmits(["new-order"]);
-defineProps({ show: Boolean });
+import CartItemsList from '../cart/CartItemsList.vue'
+defineEmits(['new-order'])
+defineProps({ show: Boolean })
 </script>
 
 <style scoped>
@@ -34,5 +38,9 @@ header {
 .order__message {
   color: var(--color-rose-500);
   font-size: 1.6rem;
+}
+
+.order-items {
+  background-color: var(--color-rose-50);
 }
 </style>

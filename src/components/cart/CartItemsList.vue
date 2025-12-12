@@ -4,27 +4,30 @@
       v-for="item in items"
       :key="item.id"
       :item-id="item.id"
+      :item-image="item.thumbnail"
       :item-name="item.name"
       :item-price="item.price"
       :item-quantity="item.quantity"
+      :is-order="isOrder"
       @remove-item="handleRemoved"
     ></SingleCartItem>
   </transition-group>
 </template>
 
 <script setup>
-import { useCartStore } from "@/store/Cart";
-import { computed } from "vue";
+import { useCartStore } from '@/store/Cart'
+import { computed } from 'vue'
+import SingleCartItem from './SingleCartItem.vue'
 
-import SingleCartItem from "./SingleCartItem.vue";
+defineProps({ isOrder: { type: Boolean, required: false } })
 
-const store = useCartStore();
+const store = useCartStore()
 
 function handleRemoved(id) {
-  store.removeItem(id);
+  store.removeItem(id)
 }
 
-const items = computed(() => store.cart);
+const items = computed(() => store.cart)
 </script>
 
 <style scoped>

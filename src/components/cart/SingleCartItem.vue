@@ -2,9 +2,11 @@
   <li class="item">
     <div class="item__detail">
       <img :src="itemImage" :alt="itemName" class="item__img" v-if="isOrder" />
-      <h3 class="item__name">{{ itemName }}</h3>
-      <span class="item__quantity">{{ itemQuantity }}x</span>
-      <span class="item__price">@ {{ price }}</span>
+      <div>
+        <h3 class="item__name">{{ itemName }}</h3>
+        <span class="item__quantity">{{ itemQuantity }}x</span>
+        <span class="item__price">@ {{ price }}</span>
+      </div>
     </div>
 
     <base-button v-if="!isOrder" mode="btn-tiny" @click="$emit('remove-item', itemId)">
